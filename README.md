@@ -28,15 +28,7 @@ The user will be created first and then can log in to the system. After this, pe
 
 Database Schema in HTML Format: 
 
- 
-Figure 56:Database schema for avoid items and diet information table.
-
- 
-Figure 57: Database schema for food items and patient details table.
-
-
-
-
+ ![image](https://github.com/user-attachments/assets/d9822cf3-4db6-46c7-970d-f2fd56042e16)
 
 
 1.	   Admin Login:
