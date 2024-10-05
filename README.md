@@ -573,45 +573,6 @@ while(rs1.next()){
 </body>
 </html>
 
-
-6.	Insert Patient Diet:
-	<%@page import="java.sql.*"%>
-<%
-
-     int rvalue=(int)(Math.random() * ((1000- 1) + 1));
-    String pcategory= request.getParameter("p1");
-   
-    String item= request.getParameter("p3");
-    String quantity= request.getParameter("p4");
-    String calories= request.getParameter("p5");
-    String fat= request.getParameter("p6");
-     String carbohydrates= request.getParameter("p7");
-     String protines= request.getParameter("p8");
-      String fat1= request.getParameter("p9");
-     String carbohydrates1= request.getParameter("p10");
-     String protines1= request.getParameter("p11");
-      String fat11= request.getParameter("p12");
-     String carbohydrates11= request.getParameter("p13");
-     String protines11= request.getParameter("p14");
-try {
-
-     Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fitrecord", "root", "root");
-    Statement st = con.createStatement();
-     Statement st1 = con.createStatement();
-    int i = st.executeUpdate("insert into patientdietinfo values('"+rvalue+"','"+pcategory+"','"+item+"','"+quantity+"','"+calories+"','"+fat+"','"+carbohydrates+"','"+protines+"','"+fat1+"','"+carbohydrates1+"','"+protines1+"','"+fat11+"','"+carbohydrates11+"','"+protines11+"')");
-     st1.executeUpdate("update patientdetails set dietstatus='Yes' where patient='"+pcategory+"'");
-    if (i != 0) {
-     response.sendRedirect("calculateBMI.jsp?allocate='registered'");// assume it was sent
-
-}else
-{
-        response.sendRedirect("calculateBMI.jsp?no='registered'");
-}}
-catch (Exception err) {
-  err.printStackTrace();
-}
-
   
   Conclusion : 
 
